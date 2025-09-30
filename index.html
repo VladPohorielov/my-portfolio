@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>My-portfolio</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>Vladyslav Pohorielov — Web Developer & AI-креатор</title>
+    <meta
+      name="description"
+      content="Vladyslav Pohorielov — Web Developer Beginner та AI-креатор. Створюю відео, візуали та прості адаптивні сайти. Зв'язок: vladpog2015@gmail.com"
+    />
+    <meta
+      name="keywords"
+      content="Web Developer, AI, AI-креатор, портфоліо, Vladyslav"
+    />
+      <link rel="canonical" href="https://vladpohorielov.github.io/" />
+
+      <!-- Open Graph -->
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Vlad Pogorelov" />
+      <meta
+        property="og:title"
+        content="Владислав Погорєлов — Web Developer & AI-креатор"
+      />
+      <meta
+        property="og:description"
+        content="Владислав Погорєлов — Web Developer і AI-креатор. Створюю веб-лендінги, AI-контент та короткі відео для соцмереж."
+      />
+      <meta property="og:image" content="assets/img/profile-img.jpg" />
+      <meta property="og:url" content="https://vladpohorielov.github.io/" />
+
+      <!-- Twitter Card -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Владислав Погорєлов — Web Developer & AI-креатор"
+      />
+      <meta
+        name="twitter:description"
+        content="Владислав Погорєлов — Web Developer і AI-креатор. Створюю веб-лендінги, AI-контент та короткі відео для соцмереж."
+      />
+      <meta name="twitter:image" content="assets/img/profile-img.jpg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Vladyslav Pohorielov — Web Developer & AI-креатор"
+    />
+    <meta
+      property="og:description"
+      content="Створюю відео, візуали та прості адаптивні сайти. Зв'язок: vladpog2015@gmail.com"
+    />
+    <meta property="og:image" content="assets/img/profile-img.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Vladyslav Pohorielov — Web Developer & AI-креатор"
+    />
+    <meta
+      name="twitter:description"
+      content="Створюю відео, візуали та прості адаптивні сайти. Зв'язок: vladpog2015@gmail.com"
+    />
+    <meta name="twitter:image" content="assets/img/profile-img.jpg" />
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
@@ -53,6 +111,9 @@
   </head>
 
   <body class="index-page">
+    <a class="visually-hidden-focusable skip-link" href="#main"
+      >Пропустити до контенту</a
+    >
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
@@ -62,10 +123,15 @@
           <h1 class="sitename">Моє Портфоліо</h1>
         </a>
 
-        <nav id="navmenu" class="navmenu">
+        <nav
+          id="navmenu"
+          class="navmenu"
+          role="navigation"
+          aria-label="Основна навігація"
+        >
           <ul>
             <li>
-              <a href="#hero" class="active">Головна</a>
+              <a href="#hero" class="active" aria-current="page">Головна</a>
             </li>
             <li><a href="#about">Про мене</a></li>
             <li><a href="#services">Послуги</a></li>
@@ -97,21 +163,35 @@
             </li> -->
             <li><a href="#contact">Контакти</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <button
+            class="mobile-nav-toggle d-xl-none bi bi-list"
+            aria-controls="navmenu"
+            aria-expanded="false"
+            aria-label="Відкрити меню"
+          ></button>
         </nav>
       </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" role="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img src="assets/img/baner2.jpg" alt="" data-aos="fade-in" />
+        <img
+          src="assets/img/baner2.jpg"
+          alt="Фонове фото: сучасний креативний банер"
+          data-aos="fade-in"
+          fetchpriority="high"
+          width="1600"
+          height="700"
+          decoding="async"
+          role="presentation"
+        />
         <div
           class="container d-flex flex-column align-items-center justify-content-center text-center"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <h2>I am Vlad Pogorelov</h2>
+          <h1>Я — Владислав Погорєлов</h1>
           <p>
             <span
               class="typed"
@@ -163,16 +243,32 @@
                 <div class="progress">
                   <span class="skill">HTML / CSS <i class="val">85%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" style="width: 85%"></div>
+                    <div
+                      class="progress-bar"
+                      style="width: 85%"
+                      aria-valuenow="85"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      role="progressbar"
+                    ></div>
                   </div>
+                  <div class="skill-level">Advanced</div>
                 </div>
                 <div class="progress">
                   <span class="skill"
                     >JavaScript (базовий рівень) <i class="val">40%</i></span
                   >
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" style="width: 40%"></div>
+                    <div
+                      class="progress-bar"
+                      style="width: 40%"
+                      aria-valuenow="40"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      role="progressbar"
+                    ></div>
                   </div>
+                  <div class="skill-level">Beginner</div>
                 </div>
                 <div class="progress">
                   <span class="skill"
@@ -180,14 +276,30 @@
                     <i class="val">95%</i></span
                   >
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" style="width: 95%"></div>
+                    <div
+                      class="progress-bar"
+                      style="width: 95%"
+                      aria-valuenow="95"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      role="progressbar"
+                    ></div>
                   </div>
+                  <div class="skill-level">Expert</div>
                 </div>
                 <div class="progress">
                   <span class="skill">UI/UX-дизайн <i class="val">60%</i></span>
                   <div class="progress-bar-wrap">
-                    <div class="progress-bar" style="width: 60%"></div>
+                    <div
+                      class="progress-bar"
+                      style="width: 60%"
+                      aria-valuenow="60"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      role="progressbar"
+                    ></div>
                   </div>
+                  <div class="skill-level">Intermediate</div>
                 </div>
               </div>
             </div>
@@ -197,27 +309,23 @@
               <div class="about-me">
                 <h4>Про мене</h4>
                 <p>
-                  Створюю цифровий контент із застосуванням сучасних
-                  AI-технологій — від генеративного відео до озвучення голосом.
+                  Я — Web Developer Beginner та AI-креатор. Створюю адаптивні лендінги
+                  й короткі відео для соцмереж, поєднуючи <strong>HTML5/CSS3/базовий JavaScript</strong>
+                  з сучасними AI-інструментами (Runway, Midjourney, ChatGPT, ElevenLabs).
+                  Швидко прототипую ідеї та доводжу їх до публікації.
                 </p>
                 <p>
-                  Володію навичками адаптивної верстки, креативного підходу та
-                  UI/UX-дизайну. Вмію швидко втілювати ідеї в візуальні продукти
-                  для брендів та соцмереж. Самостійно веду проєкти від концепту
-                  до публікації.
+                  У верстці дотримуюся семантики, підходу <em>mobile-first</em> і базових принципів доступності
+                  (alt-тексти, фокус-навігація, контраст). Працюю з макетами з Figma та Bootstrap
+                  / чистим CSS. Для простої інтерактивності використовую JS (DOM, події).
                 </p>
                 <p>
-                  Цікавлюсь e-commerce та сайтами — маю досвід із HTML/CSS,
-                  базовим JavaScript і конструкторами типу OpenCart, Shopify,
-                  Webflow. Працював із шаблонами: змінював тексти, додавав
-                  товари, оновлював банери, редагував прості блоки на сторінках.
-                  Швидко розбираюсь у нових CMS — легко адаптуюсь до технічного
-                  середовища замовника.
+                  Маю базовий досвід із конструкторами <strong>OpenCart, Shopify, Webflow</strong>:
+                  правки контенту та банерів, картки товарів, прості блоки сторінок. Легко адаптуюся
+                  до інфраструктури клієнта і беру на себе дрібні налаштування.
                 </p>
-                
               </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -237,31 +345,27 @@
                 <h4>Владислав Погорєлов</h4>
                 <p>
                   <em>
-                    AI-креативник та веб-ентузіаст. Створюю відео, візуали та
-                    сайти на перетині технологій і творчості. Працюю як
-                    digital-креатор і розвиваюсь у фронтенді.
+                    Junior Frontend (Web &amp; Game UI) та AI-креативник. Роблю адаптивні інтерфейси,
+                    лендінги й промокреативи; цікавлюся Unity UI. Працюю самостійно, синхронізую результат
+                    з бізнес-цілями й дотримуюся дедлайнів.
                   </em>
                 </p>
                 <ul>
-                  <li>
-                    <a href="https://t.me/Vladislav_Pohorielov" target="_blank"
-                      >t.me/Vladislav_Pohorielov</a
-                    >
-                  </li>
+                  <li><a href="https://t.me/Vladislav_Pohorielov" target="_blank" rel="noopener noreferrer">t.me/Vladislav_Pohorielov</a></li>
                   <li>vladpog2015@gmail.com</li>
                 </ul>
               </div>
 
               <h3 class="resume-title">Освіта</h3>
               <div class="resume-item">
-                <h4>Курс з основ Front-End розробки</h4>
-                <h5>2025 (в процесі)</h5>
-                <p>
-                  <em>
-                    Вивчаю HTML5, CSS3, адаптивну верстку, основи JavaScript,
-                    UI/UX-підхід. Практикую створення блоків, карток, макетів.
-                  </em>
-                </p>
+                <h4>Front-End Developer (HTML, CSS, JavaScript)</h4>
+                <h5>2025 (у процесі)</h5>
+                <p><em>Адаптивна верстка (mobile-first), BEM, базовий JS (DOM, події), Git/GitHub.</em></p>
+              </div>
+              <div class="resume-item">
+                <h4>Pro-курс “JavaScript &amp; React”</h4>
+                <h5>2025 (у процесі)</h5>
+                <p><em>React: компоненти, props/state, базові хуки, роутинг, робота з API.</em></p>
               </div>
             </div>
 
@@ -274,15 +378,9 @@
                 <h5>2024 — дотепер</h5>
                 <p><em>Instagram / TikTok / YouTube</em></p>
                 <ul>
-                  <li>
-                    Генерація AI-образів, сцен та озвучки (Runway, ElevenLabs,
-                    Midjourney)
-                  </li>
-                  <li>Монтаж Reels, Shorts, TikTok-контенту під тренди</li>
-                  <li>
-                    Просування візуального контенту для брендів і особистих
-                    проєктів
-                  </li>
+                  <li>Генерація сцен/образів та озвучення (Runway, ElevenLabs, Midjourney), монтаж під 9:16/1:1/16:9.</li>
+                  <li>Підбір хук-ідеї, титри/субтитри, превʼю та опис; адаптація під платформу.</li>
+                  <li>Узгодження креативів із замовниками, дотримання дедлайнів; за потреби — дрібні правки на сайті/лендінгу.</li>
                 </ul>
               </div>
 
@@ -291,11 +389,9 @@
                 <h5>2025</h5>
                 <p><em>Landing Pages, UI-макети</em></p>
                 <ul>
-                  <li>
-                    Практика HTML/CSS, адаптивної та кросбраузерної верстки
-                  </li>
-                  <li>Робота з конструкторами сайтів: OpenCart, Webflow</li>
-                  <li>Створення власних кейсів для портфоліо та клієнтів</li>
+                  <li>Верстка лендінгів: семантичний HTML5, CSS Grid/Flex, адаптив 360–1280+, JS для меню/модалок.</li>
+                  <li>Робота з конструкторами: OpenCart/Webflow — контент, банери, картки товарів.</li>
+                  <li>Пет-проєкти: to-do/галерея (ES6, localStorage), демо-портфоліо, деплой на GitHub Pages.</li>
                 </ul>
               </div>
             </div>
@@ -324,8 +420,8 @@
                   ><h3>AI-відео та монтаж</h3></a
                 >
                 <p>
-                  Генерація відео за допомогою AI (Runway, ElevenLabs) та
-                  подальший монтаж під соцмережі (Reels, Shorts, TikTok).
+                  Генерація відео та озвучення (Runway, ElevenLabs) + монтаж під 9:16/1:1/16:9, субтитри й обкладинка.
+                  <strong>Вихід:</strong> 1–3 ролики, 1 коло правок.
                 </p>
               </div>
             </div>
@@ -341,8 +437,8 @@
                   ><h3>Креативи для брендів</h3></a
                 >
                 <p>
-                  Генерація візуального контенту, створення сценаріїв та
-                  адаптованих креативів під конкретні задачі бізнесу.
+                  Концепт → сценарій → візуальні варіанти; адаптація під Instagram/TikTok з хештегами й текстами.
+                  <strong>Вихід:</strong> пакет з 3–5 креативів.
                 </p>
               </div>
             </div>
@@ -358,8 +454,8 @@
                   ><h3>Front-End верстка</h3></a
                 >
                 <p>
-                  HTML5, CSS3, адаптивна верстка, UI/UX — створення лендінгів та
-                  простих сайтів, оптимізованих під мобільні.
+                  Лендінг/мікросайт на HTML5/CSS3 + базовий JS; mobile-first, SEO-мета, деплой на GitHub Pages.
+                  <strong>Вихід:</strong> готовий репозиторій і посилання.
                 </p>
               </div>
             </div>
@@ -373,8 +469,8 @@
                 <div class="icon"><i class="bi bi-lightbulb"></i></div>
                 <a href="#" class="stretched-link"><h3>AI-стратегії</h3></a>
                 <p>
-                  Підбір і впровадження сучасних AI-інструментів у
-                  бізнес-процеси: генерація контенту, автоматизація, аналітика.
+                  Підбір AI-інструментів, пайплайн контенту, прості автоматизації (боти/шаблони).
+                  <strong>Вихід:</strong> гайд + онбординг 60–90 хв.
                 </p>
               </div>
             </div>
@@ -388,8 +484,8 @@
                 <div class="icon"><i class="bi bi-ui-checks"></i></div>
                 <a href="#" class="stretched-link"><h3>UI/UX аудит</h3></a>
                 <p>
-                  Оцінка та покращення інтерфейсів: зручність, логіка
-                  користування, адаптивність, візуальна привабливість.
+                  Швидка перевірка: ієрархія контенту, контраст/типографіка, мобільна зручність, швидкість.
+                  <strong>Вихід:</strong> PDF-звіт з пріоритетами P0/P1 і прикладами.
                 </p>
               </div>
             </div>
@@ -405,8 +501,8 @@
                   ><h3>Швидкий старт бренду</h3></a
                 >
                 <p>
-                  Від ідеї до запуску: візуальна концепція, сайт, перші
-                  креативи, запуск реклами або TikTok-стратегії.
+                  Від ідеї до запуску: назва/візуальна концепція, сайт-лендінг, перші креативи, просте налаштування реклами/TikTok.
+                  <strong>Вихід:</strong> стартовий пакет за 3–7 днів.
                 </p>
               </div>
             </div>
@@ -534,6 +630,10 @@
                   src="assets/img/portfolio/app-1.PNG"
                   class="img-fluid"
                   alt="Флорист GURT з рожевими трояндами"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
                   <h4>Менеджер з букетом</h4>
@@ -556,6 +656,10 @@
                   src="assets/img/portfolio/app-2.PNG"
                   class="img-fluid"
                   alt="Флорист за планшетом"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
                   <h4>Обробка замовлень</h4>
@@ -578,6 +682,10 @@
                   src="assets/img/portfolio/app-3.PNG"
                   class="img-fluid"
                   alt="Директор у шоурумі GURT"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
                   <h4>Директор магазину</h4>
@@ -600,6 +708,10 @@
                   src="assets/img/portfolio/app-4.PNG"
                   class="img-fluid"
                   alt="Флористка за роботою"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
                   <h4>Флористка за роботою</h4>
@@ -621,7 +733,11 @@
                 <img
                   src="assets/img/portfolio/app-5.png"
                   class="img-fluid"
-                  alt="Працівник Укренерго в полі"
+                  alt="Працівник у полі — ілюстрація"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
                   <h4>Укренерго: польові умови</h4>
@@ -643,7 +759,11 @@
                 <img
                   src="assets/img/portfolio/app-6.png"
                   class="img-fluid"
-                  alt="Енергетик вночі"
+                  alt="Монтер біля будинку"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
                   <h4>Укренерго: нічна зміна</h4>
@@ -666,10 +786,14 @@
                   src="assets/img/portfolio/app-7.png"
                   class="img-fluid"
                   alt="Котик-флорист у магазині"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
-                  <h4>Укренерго: польові умови</h4>
-                  <p>AI-анімація для контенту GURT</p>
+                  <h4>Котик-флорист</h4>
+                  <p>AI-анімація / ілюстрація для контенту</p>
                   <a
                     href="assets/img/portfolio/app-7.png"
                     class="glightbox preview-link"
@@ -686,15 +810,19 @@
                 <img
                   src="assets/img/portfolio/app-9.png"
                   class="img-fluid"
-                  alt="Енергетик вночі"
+                  alt="Креативна AI-ілюстрація"
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
                 />
                 <div class="portfolio-info">
-                  <h4>УКотик-флорист</h4>
+                  <h4>Котик-флорист</h4>
                   <p>AI-ілюстрація</p>
                   <a
                     href="assets/img/portfolio/app-9.png"
                     class="glightbox preview-link"
-                    title="Укренерго: нічна зміна"
+                    title="Котик-флорист"
                   >
                     <i class="bi bi-zoom-in"></i>
                   </a>
@@ -713,8 +841,9 @@
                     title="AI Відео"
                     allowfullscreen
                     frameborder="0"
-                  >
-                  </iframe>
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                  ></iframe>
                 </div>
               </div>
 
@@ -728,6 +857,8 @@
                     title="AI Відео 2"
                     allowfullscreen
                     frameborder="0"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
                   ></iframe>
                 </div>
               </div>
@@ -742,6 +873,8 @@
                     title="AI Відео 3"
                     allowfullscreen
                     frameborder="0"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
                   ></iframe>
                 </div>
                 <div class="portfolio-info">
@@ -763,8 +896,10 @@
                   <h4>Багатосторінковий сайт</h4>
                   <p>Адаптивний дизайн, HTML, CSS, JavaScript</p>
                   <a
+                    <a
                     href="https://vladpohorielov.github.io/TechDrop-UA/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="details-link"
                     title="Переглянути сайт"
                   >
@@ -781,6 +916,8 @@
                     title="Демо Telegram-бота"
                     frameborder="0"
                     allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
                   ></iframe>
                 </div>
                 <div class="portfolio-info">
@@ -791,6 +928,7 @@
                   <a
                     href="https://github.com/VladPohorielov/beauty-telegram-bot"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="details-link"
                     title="Переглянути код"
                   >
@@ -967,8 +1105,8 @@
                   </h3>
                   <div class="faq-content">
                     <p>
-                      Просто напиши в Telegram @PogorelovVlad або на email
-                      vladpog2015@gmail.com — відповім максимально швидко.
+                      Просто напиши в Telegram @Vladislav_Pohorielov або на
+                      email vladpog2015@gmail.com — відповім максимально швидко.
                     </p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
@@ -1127,7 +1265,7 @@
                     alt=""
                   />
                   <h3>Микита Бондар</h3>
-                  <h4>Засновниця онлайн-школи</h4>
+                  <h4>Засновник онлайн-школи</h4>
                   <div class="stars">
                     <i class="bi bi-star-fill"></i
                     ><i class="bi bi-star-fill"></i
@@ -1207,6 +1345,7 @@
             class="php-email-form"
             data-aos="fade-up"
             data-aos-delay="300"
+            aria-label="Форма контакту"
           >
             <div class="row gy-4">
               <div class="col-md-6">
@@ -1215,6 +1354,7 @@
                   name="name"
                   class="form-control"
                   placeholder="Твоє ім’я"
+                  aria-label="Ім'я"
                   required=""
                 />
               </div>
@@ -1225,6 +1365,7 @@
                   class="form-control"
                   name="email"
                   placeholder="Твій email"
+                  aria-label="Email"
                   required=""
                 />
               </div>
@@ -1235,6 +1376,7 @@
                   class="form-control"
                   name="subject"
                   placeholder="Тема повідомлення"
+                  aria-label="Тема повідомлення"
                   required=""
                 />
               </div>
@@ -1245,14 +1387,19 @@
                   name="message"
                   rows="6"
                   placeholder="Твоє повідомлення"
+                  aria-label="Повідомлення"
                   required=""
                 ></textarea>
               </div>
 
               <div class="col-md-12 text-center">
-                <div class="loading">Надсилаю...</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
+                <div class="loading" aria-hidden="true">Надсилаю...</div>
+                <div
+                  class="error-message"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+                <div class="sent-message" role="status" aria-live="polite">
                   Повідомлення надіслано! Дякую за звернення!
                 </div>
 
@@ -1273,21 +1420,31 @@
       <div class="container">
         <div class="copyright text-center">
           <p>
-            © 2025 <strong class="px-1 sitename">Vlad Pogorelov</strong> — All
-            rights reserved.
+            Зміни й контент © 2025
+            <strong class="px-1 sitename">Vlad Pogorelov</strong>. Всі права
+            захищені.
           </p>
         </div>
         <div class="social-links d-flex justify-content-center">
-          <a href="https://t.me/Vladislav_Pohorielov" target="_blank"
+          <a
+            href="https://t.me/Vladislav_Pohorielov"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="bi bi-telegram"></i
           ></a>
-          <a href="mailto:Vladpog2015@gmail.com"
+          <a href="mailto:vladpog2015@gmail.com"
             ><i class="bi bi-envelope-fill"></i
           ></a>
-          <a href="https://www.linkedin.com/in/vladpogorelov" target="_blank"
+          <a
+            href="https://www.linkedin.com/in/vladpogorelov"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="bi bi-linkedin"></i
           ></a>
-          <a href="https://github.com/VladPohorielov" target="_blank"
+          <a
+            href="https://github.com/VladPohorielov"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="bi bi-github"></i
           ></a>
         </div>
@@ -1299,6 +1456,26 @@
         </div>
       </div>
     </footer>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vladyslav Pohorielov",
+        "email": "mailto:vladpog2015@gmail.com",
+        "url": "https://example.com/",
+        "sameAs": [
+          "https://github.com/VladPohorielov",
+          "https://www.linkedin.com/in/vladpogorelov",
+          "https://t.me/Vladislav_Pohorielov"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Одеса",
+          "addressCountry": "UA"
+        }
+      }
+    </script>
 
     <!-- Scroll Top -->
     <a

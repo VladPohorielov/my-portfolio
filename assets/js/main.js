@@ -31,6 +31,10 @@
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
+    // update accessible state
+    const expanded = mobileNavToggleBtn.getAttribute('aria-expanded') === 'true';
+    mobileNavToggleBtn.setAttribute('aria-expanded', String(!expanded));
+    mobileNavToggleBtn.setAttribute('aria-label', !expanded ? 'Закрити меню' : 'Відкрити меню');
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
@@ -181,11 +185,21 @@
   });
 
   /**
-   * Frequently Asked Questions Toggle
+   * Frequently Asked Questions Toggle — improved accessibility
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
+  document.querySelectorAll('.faq-item').forEach((faq) => {
+    const trigger = faq.querySelector('h3') || faq.querySelector('.faq-toggle');
+    if (!trigger) return;
+    trigger.style.cursor = 'pointer';
+    trigger.setAttribute('tabindex', '0');
+    trigger.addEventListener('click', () => {
+      faq.classList.toggle('faq-active');
+    });
+    trigger.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        faq.classList.toggle('faq-active');
+      }
     });
   });
 
