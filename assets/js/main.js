@@ -1,10 +1,8 @@
-/**
-* Template Name: DevFolio
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/**n+ * Project: my-portfolio
+ * Author: Владислав Погорєлов
+ * Updated: 2025-09-30
+ * Notes: Основний JS для портфоліо; збережено інтеграцію з AOS, Glightbox, Isotope тощо.
+ */
 
 (function() {
   "use strict";

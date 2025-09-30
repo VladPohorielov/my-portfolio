@@ -1,6 +1,19 @@
-Thanks for downloading this template!
+my-portfolio
 
-Template Name: DevFolio
-Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Короткий опис:
+Це персональне портфоліо веб-сайт (статичний HTML/CSS/JS) — проект для демонстрації навичок, проєктів та контактів.
+
+Файли в цьому репозиторії:
+- `index.html` — головна сторінка портфоліо
+- `portfolio-details.html`, `service-details.html`, `starter-page.html` — додаткові сторінки
+- `assets/` — стилі, скрипти та медіа-активи
+
+Автор: Владислав Погорєлов
+Оновлено: 2025-09-30
+Ліцензія: власна (для приватного портфоліо). Якщо ви використовуєте зовнішні бібліотеки (Bootstrap, AOS, Glightbox тощо), дотримуйтесь їхніх ліцензій.
+
+Контакти:
+- Email: vlad@example.com
+- GitHub: https://github.com/VladPohorielov
+
+Примітка: видалено типові служебні коментарі шаблону для читабельності. Якщо потрібно зберегти оригінальні авторські відомості, повідомте — я додам секцію "Credits".
