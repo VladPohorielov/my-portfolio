@@ -1,0 +1,22 @@
+{
+  "attr-lowercase": true,
+  "attr-no-duplication": true,
+  "attr-value-double-quotes": true,
+  "doctype-first": false,
+  "head-script-disabled": false,
+  "id-unique": true,
+  "spec-char-escape": true,
+  "tagname-lowercase": true,
+  "title-require": true
+}
+{
+  "attr-lowercase": true,
+  "attr-no-duplication": true,
+  "attr-value-double-quotes": true,
+  "doctype-first": false,
+  "head-script-disabled": false,
+  "id-unique": true,
+  "spec-char-escape": true,
+  "tagname-lowercase": true,
+  "title-require": true
+}
