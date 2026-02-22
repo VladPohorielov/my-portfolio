@@ -1519,6 +1519,7 @@
       /* VIDEO RAIL */
       .video-rail-wrap {
         overflow: hidden;
+        width: 100%;
       }
       .rail-header {
         display: flex;
@@ -1548,6 +1549,8 @@
         gap: 16px;
         overflow-x: auto;
         padding: 0 48px 24px;
+        box-sizing: border-box;
+        max-width: 100vw;
         scrollbar-width: thin;
         scrollbar-color: var(--accent) transparent;
         scroll-snap-type: x mandatory;
@@ -2007,16 +2010,7 @@
           1. Замінити <div class="hero-photo-placeholder"> на:
           <img src="YOUR_PHOTO_URL" alt="Владислав Погорєлов" class="hero-photo">
         -->
-            <div class="hero-photo-placeholder">
-              <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-              </svg>
-              Додайте своє фото<br />
-              <small style="font-size: 11px; opacity: 0.5"
-                >300×400px або більше</small
-              >
-            </div>
+            <img src="src/I.jpg" alt="Владислав Погорєлов" class="hero-photo" />
             <div class="photo-badge">
               <div class="photo-badge-name">ВЛАДИСЛАВ П.</div>
               <div class="photo-badge-role">AI Content Creator</div>
@@ -2365,13 +2359,14 @@
       </div>
 
       <!-- ① FEATURED VIDEO — головний showreel -->
+      <!--
       <div class="wrap">
         <div class="showreel-wrap reveal">
           <div class="showreel-label">
             <span class="sr-dot"></span>Showreel 2026
           </div>
           <div class="video-main">
-            <!-- Заміни VIDEO_ID на свій YouTube ID -->
+            Заміни VIDEO_ID на свій YouTube ID
             <iframe
               src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1&color=white"
               title="Showreel 2026"
@@ -2390,6 +2385,7 @@
           </div>
         </div>
       </div>
+      -->
 
       <!-- ② VIDEO SCROLL RAIL — 10 відео горизонтально -->
       <div class="video-rail-wrap">
@@ -2653,6 +2649,31 @@
             <div class="vr-info">
               <div class="vr-tag">TikTok · Food</div>
               <div class="vr-name">ASMR Product Drop</div>
+            </div>
+          </div>
+
+          <div class="vr-card">
+            <div
+              class="vr-thumb"
+              data-src="https://www.youtube.com/embed/Zfzti0mI8Ro?autoplay=1&rel=0"
+            >
+              <div
+                class="vr-thumb-img"
+                style="
+                  background-image: url(&quot;https://img.youtube.com/vi/Zfzti0mI8Ro/maxresdefault.jpg&quot;);
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+              <button class="vr-play">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+            </div>
+            <div class="vr-info">
+              <div class="vr-tag">YouTube Shorts</div>
+              <div class="vr-name">Новий проект</div>
             </div>
           </div>
         </div>
@@ -3032,14 +3053,14 @@
           підхід.
         </p>
         <div class="contact-links reveal">
-          <a href="https://t.me/yourusername" class="contact-link">
+          <a href="https://t.me/Vladislav_Pohorielov" class="contact-link">
             <span>✈️</span> Telegram
           </a>
           <a href="#" class="contact-link" id="email-link">
             <span>📧</span> Email
           </a>
         </div>
-        <a href="https://t.me/yourusername" class="cta-mega reveal">
+        <a href="https://t.me/Vladislav_Pohorielov" class="cta-mega reveal">
           Let's build scalable creatives ↗
         </a>
       </div>
