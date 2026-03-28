@@ -1,0 +1,13 @@
+{
+  "name": "vp-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vladislav Pohorielov — AI Content Creator portfolio",
+  "scripts": {
+    "optimize-svg": "svgo -f src/ --recursive",
+    "quality": "node scripts/quality-gates.js"
+  },
+  "devDependencies": {
+    "svgo": "^3.3.2"
+  }
+}
