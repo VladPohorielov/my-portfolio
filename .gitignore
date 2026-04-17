@@ -1,6 +1,4 @@
 node_modules/
-dist/
-!dist/I.jpg
 .env
 .env.local
 .env.*.local
