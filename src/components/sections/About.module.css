@@ -1,0 +1,235 @@
+.section {
+  padding: 96px 0;
+  border-top: 1px solid var(--border);
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── About grid (bio 2-col) ── */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+/* ── Left col: copy ── */
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 16px;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 56px);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.body p {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.body strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── Right col: pills (SpotlightCard) ── */
+.pills {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* SpotlightCard overrides — клас передається через className */
+.pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 22px;
+  cursor: default;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.pill:hover {
+  transform: translateY(-2px);
+}
+
+.pillIcon {
+  flex-shrink: 0;
+  color: var(--accent-light);
+  margin-top: 2px;
+}
+.pillIcon svg {
+  display: block;
+}
+
+.pillBody h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.pillBody p {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text3);
+  line-height: 1.6;
+}
+
+/* ── Experience section ── */
+.expHeader {
+  margin-bottom: 32px;
+}
+
+.expList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 40px;
+  transition: border-color 0.3s ease;
+}
+.expCard:hover {
+  border-color: var(--border2);
+}
+
+.expCompany {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 6px;
+}
+
+.ndaBadge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-light);
+  background: rgba(45, 212, 191, 0.12);
+  border: 1px solid rgba(45, 212, 191, 0.28);
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.expTitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.expPoints {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.expPoints li {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+.expPoints li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: var(--accent-light);
+  font-weight: 700;
+}
+.expPoints li strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.expMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.expBadge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.22);
+  border-radius: 8px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+.expPeriod {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .wrap {
+    padding: 0 24px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 56px;
+  }
+  .expCard {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+  .expMeta {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 64px 0;
+  }
+  .wrap {
+    padding: 0 20px;
+  }
+}

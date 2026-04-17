@@ -10,9 +10,9 @@
   --surface: #1c1c1f;
   --border: rgba(255, 255, 255, 0.08);
   --border2: rgba(255, 255, 255, 0.14);
-  --accent: #6366f1;
-  --accent-light: #818cf8;
-  --accent-glow: rgba(99, 102, 241, 0.3);
+  --accent: #2dd4bf;
+  --accent-light: #5eead4;
+  --accent-glow: rgba(45, 212, 191, 0.3);
   --neon: #a5f3fc;
   --neon-warm: #fde68a;
   --text: #fafafa;
@@ -241,7 +241,7 @@ nav.menu-open .hamburger span:nth-child(3) {
   background:
     radial-gradient(
       ellipse 55% 60% at 75% 45%,
-      rgba(99, 102, 241, 0.13) 0%,
+      rgba(45, 212, 191, 0.13) 0%,
       transparent 65%
     ),
     radial-gradient(
@@ -289,8 +289,8 @@ nav.menu-open .hamburger span:nth-child(3) {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.28);
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.28);
   padding: 6px 14px 6px 10px;
   border-radius: 100px;
   font-size: 12px;
@@ -331,7 +331,7 @@ nav.menu-open .hamburger span:nth-child(3) {
   background: linear-gradient(
     110deg,
     rgba(255, 255, 255, 0.42) 0%,
-    rgba(129, 140, 248, 0.32) 52%,
+    rgba(94, 234, 212, 0.32) 52%,
     rgba(165, 243, 252, 0.18) 100%
   );
   -webkit-background-clip: text;
@@ -405,7 +405,7 @@ nav.menu-open .hamburger span:nth-child(3) {
 .cta-fill:hover {
   background: var(--accent-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.22);
+  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.22);
 }
 
 .cta-ghost {
@@ -428,7 +428,7 @@ nav.menu-open .hamburger span:nth-child(3) {
   transform: translateY(-2px);
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(99, 102, 241, 0.12);
+    0 0 0 1px rgba(45, 212, 191, 0.12);
 }
 
 .hero-metrics {
@@ -440,7 +440,7 @@ nav.menu-open .hamburger span:nth-child(3) {
 }
 .metric {
   padding-left: 14px;
-  border-left: 1px solid rgba(99, 102, 241, 0.35);
+  border-left: 1px solid rgba(45, 212, 191, 0.35);
 }
 .metric-val {
   font-family: "Bebas Neue", sans-serif;
@@ -482,7 +482,7 @@ nav.menu-open .hamburger span:nth-child(3) {
   justify-content: center;
   box-shadow:
     0 24px 64px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(99, 102, 241, 0.12);
+    0 0 0 1px rgba(45, 212, 191, 0.12);
 }
 
 .hero-photo-frame::before {
@@ -540,8 +540,8 @@ nav.menu-open .hamburger span:nth-child(3) {
   right: -1px;
   width: 40px;
   height: 40px;
-  border-top: 1.5px solid rgba(99, 102, 241, 0.5);
-  border-right: 1.5px solid rgba(99, 102, 241, 0.5);
+  border-top: 1.5px solid rgba(45, 212, 191, 0.5);
+  border-right: 1.5px solid rgba(45, 212, 191, 0.5);
   border-radius: 0 20px 0 0;
   pointer-events: none;
 }
@@ -724,7 +724,7 @@ nav.menu-open .hamburger span:nth-child(3) {
   transition: transform 0.3s;
 }
 .pill:hover {
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: rgba(45, 212, 191, 0.3);
   transform: translateX(4px);
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -786,11 +786,11 @@ nav.menu-open .hamburger span:nth-child(3) {
   position: relative;
 }
 .tool-card:hover {
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: rgba(45, 212, 191, 0.3);
   transform: translateY(-3px);
   box-shadow:
     0 20px 48px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(99, 102, 241, 0.12);
+    0 0 0 1px rgba(45, 212, 191, 0.12);
 }
 
 .tool-card-head {
@@ -805,8 +805,8 @@ nav.menu-open .hamburger span:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.14);
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.14);
   border-radius: 8px;
   color: var(--accent-light);
   flex-shrink: 0;
@@ -842,14 +842,14 @@ nav.menu-open .hamburger span:nth-child(3) {
   letter-spacing: 0.01em;
 }
 .chip:hover {
-  background: rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(45, 212, 191, 0.15);
+  border-color: rgba(45, 212, 191, 0.4);
   color: var(--accent-light);
   transform: translateY(-1px);
 }
 .chip.accent {
-  background: rgba(99, 102, 241, 0.14);
-  border-color: rgba(99, 102, 241, 0.32);
+  background: rgba(45, 212, 191, 0.14);
+  border-color: rgba(45, 212, 191, 0.32);
   color: var(--accent-light);
   font-weight: 500;
 }
@@ -890,10 +890,10 @@ nav.menu-open .hamburger span:nth-child(3) {
   transition: opacity 0.3s;
 }
 .exp-item-card:hover {
-  border-color: rgba(99, 102, 241, 0.25);
+  border-color: rgba(45, 212, 191, 0.25);
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(99, 102, 241, 0.1);
+    0 0 0 1px rgba(45, 212, 191, 0.1);
 }
 .exp-item-card:hover::before {
   opacity: 1;
@@ -948,8 +948,8 @@ nav.menu-open .hamburger span:nth-child(3) {
 }
 .exp-badge {
   display: inline-block;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.25);
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.25);
   color: var(--accent-light);
   padding: 5px 14px;
   border-radius: 8px;
@@ -1011,10 +1011,10 @@ nav.menu-open .hamburger span:nth-child(3) {
   z-index: 1;
 }
 .wf-step:hover .wf-num {
-  background: rgba(99, 102, 241, 0.12);
-  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(45, 212, 191, 0.12);
+  border-color: rgba(45, 212, 191, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 12px 32px rgba(45, 212, 191, 0.25);
 }
 .wf-title {
   font-size: 14px;
@@ -1034,8 +1034,8 @@ nav.menu-open .hamburger span:nth-child(3) {
   margin-top: 10px;
   font-size: 11px;
   color: var(--accent-light);
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.15);
   padding: 4px 10px;
   border-radius: 6px;
   font-weight: 500;
@@ -1059,11 +1059,11 @@ nav.menu-open .hamburger span:nth-child(3) {
   transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .why-card:hover {
-  border-color: rgba(99, 102, 241, 0.3);
+  border-color: rgba(45, 212, 191, 0.3);
   transform: translateY(-6px);
   box-shadow:
     0 28px 64px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(99, 102, 241, 0.12);
+    0 0 0 1px rgba(45, 212, 191, 0.12);
 }
 .why-card-n {
   font-family: "Bebas Neue", sans-serif;
@@ -1083,8 +1083,8 @@ nav.menu-open .hamburger span:nth-child(3) {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.15);
   border-radius: 14px;
   color: var(--accent-light);
 }
@@ -1133,18 +1133,18 @@ nav.menu-open .hamburger span:nth-child(3) {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(99, 102, 241, 0.04),
+    rgba(45, 212, 191, 0.04),
     transparent 60%
   );
   opacity: 0;
   transition: opacity 0.3s;
 }
 .brand-card:hover {
-  border-color: rgba(99, 102, 241, 0.25);
+  border-color: rgba(45, 212, 191, 0.25);
   transform: translateY(-2px);
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(99, 102, 241, 0.1);
+    0 0 0 1px rgba(45, 212, 191, 0.1);
 }
 .brand-card:hover::before {
   opacity: 1;
@@ -1152,8 +1152,8 @@ nav.menu-open .hamburger span:nth-child(3) {
 .brand-icon {
   width: 40px;
   height: 40px;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.2);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -1250,8 +1250,8 @@ nav.menu-open .hamburger span:nth-child(3) {
   transform: translateY(-3px);
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(99, 102, 241, 0.15),
-    0 0 24px rgba(99, 102, 241, 0.12);
+    0 0 0 1px rgba(45, 212, 191, 0.15),
+    0 0 24px rgba(45, 212, 191, 0.12);
 }
 
 .cta-mega {
@@ -1281,8 +1281,8 @@ nav.menu-open .hamburger span:nth-child(3) {
 .cta-mega:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 12px 28px rgba(99, 102, 241, 0.3),
-    0 20px 48px rgba(99, 102, 241, 0.15);
+    0 12px 28px rgba(45, 212, 191, 0.3),
+    0 20px 48px rgba(45, 212, 191, 0.15);
 }
 .cta-mega:hover::before {
   opacity: 1;
@@ -1439,11 +1439,11 @@ footer span {
 }
 .vr-card:hover .vr-thumb,
 .vr-card:focus-visible .vr-thumb {
-  border-color: rgba(99, 102, 241, 0.5);
+  border-color: rgba(45, 212, 191, 0.5);
   transform: translateY(-4px);
   box-shadow:
     0 20px 56px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(99, 102, 241, 0.18);
+    0 0 0 1px rgba(45, 212, 191, 0.18);
 }
 .vr-thumb-img {
   display: block;
@@ -1540,7 +1540,7 @@ footer span {
 .m-item:focus-visible {
   transform: scale(1.02);
   z-index: 2;
-  border-color: rgba(99, 102, 241, 0.4);
+  border-color: rgba(45, 212, 191, 0.4);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
 }
 .m-item:hover .m-media,
@@ -1713,7 +1713,7 @@ footer span {
 }
 .lb-prev:hover,
 .lb-next:hover {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(45, 212, 191, 0.3);
   border-color: var(--accent);
   color: #fff;
 }
@@ -1736,10 +1736,10 @@ footer span {
     box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .case-card:hover {
-  border-color: rgba(99, 102, 241, 0.35);
+  border-color: rgba(45, 212, 191, 0.35);
   box-shadow:
     0 16px 48px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(99, 102, 241, 0.12);
+    0 0 0 1px rgba(45, 212, 191, 0.12);
 }
 
 /* ─── COLLAPSED HEADER ─── */
@@ -1758,8 +1758,8 @@ footer span {
 .case-num {
   display: inline-flex;
   align-items: center;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.22);
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.22);
   color: var(--accent-light);
   padding: 4px 11px;
   border-radius: 6px;
@@ -1934,7 +1934,7 @@ footer span {
 }
 .case-toggle:hover {
   color: var(--accent-light);
-  background: rgba(99, 102, 241, 0.05);
+  background: rgba(45, 212, 191, 0.05);
 }
 
 .case-toggle-icon {
@@ -2008,7 +2008,7 @@ footer span {
   gap: 10px;
   background: rgba(9, 9, 11, 0.92);
   backdrop-filter: blur(20px) saturate(160%);
-  border: 1px solid rgba(99, 102, 241, 0.35);
+  border: 1px solid rgba(45, 212, 191, 0.35);
   border-radius: 100px;
   padding: 9px 10px 9px 14px;
   font-size: 13px;
@@ -2091,8 +2091,8 @@ footer span {
 .exp-nda {
   display: inline-flex;
   align-items: center;
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.22);
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.22);
   color: var(--accent-light);
   padding: 2px 7px;
   border-radius: 5px;
@@ -2157,15 +2157,15 @@ footer span {
   transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .tmt-card:hover {
-  border-color: rgba(99, 102, 241, 0.25);
+  border-color: rgba(45, 212, 191, 0.25);
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.28),
-    0 0 0 1px rgba(99, 102, 241, 0.08);
+    0 0 0 1px rgba(45, 212, 191, 0.08);
 }
 .tmt-quote-mark {
   font-family: "Bebas Neue", sans-serif;
   font-size: 64px;
-  color: rgba(99, 102, 241, 0.15);
+  color: rgba(45, 212, 191, 0.15);
   line-height: 0.6;
   display: block;
   margin-bottom: 16px;

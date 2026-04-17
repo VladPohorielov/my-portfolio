@@ -1,0 +1,196 @@
+/* ==============================================================
+   global.css — Глобальна база нового React-проєкту
+   Містить: CSS-змінні, reset, типографіку, scrollbar, focus.
+   Компонентні стилі — у *.module.css поруч із компонентами.
+   Джерело: styles/main.css (ванільне портфоліо).
+   ============================================================== */
+
+/* ─── 1. Fonts ─────────────────────────────────────────────────
+   Bebas Neue — display headlines.
+   Outfit      — body/UI (replaces Inter, taste-skill compliant).
+   Geist Mono  — numbers and metrics (tabular figures). */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap");
+
+/* ─── 2. Дизайн-токени ─────────────────────────────────────────
+   Всі кольори, типографіка та Z-індекси — тільки тут.
+   Компоненти звертаються до цих змінних, не до hex-значень. */
+:root {
+  /* Фони */
+  --ink: #09090b;
+  --ink2: #18181b;
+  --ink3: #27272a;
+  --surface: #1c1c1f;
+
+  /* Межі */
+  --border: rgba(255, 255, 255, 0.08);
+  --border2: rgba(255, 255, 255, 0.14);
+
+  /* Акцент — teal (замість AI-фіолетового, заборонено taste-skill) */
+  --accent: #2dd4bf;
+  --accent-light: #5eead4;
+  --accent-glow: rgba(45, 212, 191, 0.25);
+
+  /* Підсвітка */
+  --neon: #a5f3fc;
+  --neon-warm: #fde68a;
+
+  /* Текст */
+  --text: #fafafa;
+  --text2: #d4d4d8;
+  --text3: #a1a1aa;
+  --text4: #71717a;
+  --white: #ffffff;
+
+  /* Шрифти */
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  /* Z-індекси */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-nav: 500;
+  --z-modal: 900;
+  --z-grain: 9999;
+
+  /* Радіуси */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Тіні — тинтовані під акцент */
+  --shadow-glow:
+    0 0 0 1px rgba(45, 212, 191, 0.18), 0 8px 32px rgba(45, 212, 191, 0.12);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ─── 3. Box-model reset ───────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── 4. HTML / Body ───────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Radix Dialog встановлює pointer-events:none на <body> при відкритому модалі.
+   body.ui-locked (ванільний клас) більше не потрібен — залишено для сумісності. */
+body.ui-locked {
+  overflow: hidden;
+}
+
+/* ─── 5. Grain overlay (шум-текстура поверх усього) ─────────── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: var(--z-grain);
+}
+
+/* ─── 6. Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ─── 7. Базовий reset для інтерактивних елементів ─────────── */
+:where(a, button) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(a, button):focus {
+  outline: none;
+}
+
+/* ─── 8. Focus-visible (єдине місце для глобального кільця) ───
+   Prefixed-селектори тут — загальна конвенція для кнопок
+   і посилань. Компонентні кнопки (Modal close) дублюють
+   цей стиль через data-атрибут або спеціальний клас. */
+:where(
+  [data-focus-ring],
+  .nav-logo,
+  .nav-links a,
+  .nav-btn,
+  .hamburger,
+  .cta-fill,
+  .cta-ghost,
+  .sticky-cta-btn,
+  .vr-card,
+  .m-item,
+  .contact-link,
+  .cta-mega
+):focus-visible {
+  outline: 2px solid var(--neon);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(165, 243, 252, 0.18);
+}
+
+/* ─── 9. Базова типографіка ────────────────────────────────── */
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+/* ─── text-wrap: balance — запобігає рядкам-сиротам у заголовках ── */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* ─── 10. Reveal-анімація (загальний клас, що використовується
+   у SectionReveal-компоненті як fallback для prefers-reduced-motion) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

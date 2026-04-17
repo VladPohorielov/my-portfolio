@@ -1,0 +1,190 @@
+/* PillNav — стилі. Адаптовано під темну тему та позиціювання через обгортку Nav.tsx */
+
+.pill-nav-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Головний рядок ── */
+.pill-nav-items {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 9999px;
+  background: var(--base, rgba(9, 9, 11, 0.9));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* ── Лого ── */
+.pill-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 9999px;
+  color: #fff;
+  font-family: var(--font-display, "Bebas Neue", sans-serif);
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+.pill-logo:hover {
+  color: var(--accent-light, #5eead4);
+}
+
+/* ── Десктопні посилання ── */
+.pill-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pill-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--pill-text, #a1a1aa);
+  transition: color 0.18s;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pill-item:hover,
+.pill-item--active {
+  color: var(--pill-text-hovered, #fff);
+}
+
+/* Background fill за pill-item */
+.pill-item-bg {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--pill, #18181b);
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 0.18s,
+    transform 0.22s;
+  pointer-events: none;
+}
+.pill-item:hover .pill-item-bg,
+.pill-item--active .pill-item-bg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Active indicator */
+.pill-item--active .pill-item-bg {
+  background: rgba(45, 212, 191, 0.18);
+}
+.pill-item--active {
+  color: var(--accent-light, #5eead4);
+}
+
+.pill-item-label {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Мобільний бургер ── */
+.mobile-menu-button {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+}
+.mobile-menu-button span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #a1a1aa;
+  border-radius: 2px;
+  transition:
+    transform 0.22s,
+    opacity 0.22s,
+    background 0.18s;
+  transform-origin: center;
+}
+.mobile-menu-button.open span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-button.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.mobile-menu-button.open span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.mobile-menu-button:hover span {
+  background: #fff;
+}
+
+/* ── Мобільне меню ── */
+.mobile-menu {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2px;
+  padding: 8px;
+  border-radius: 16px;
+  background: var(--base, rgba(9, 9, 11, 0.96));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  min-width: 180px;
+  opacity: 0;
+}
+
+.mobile-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--pill-text, #a1a1aa);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.mobile-menu-item:hover,
+.mobile-menu-item.active {
+  background: rgba(45, 212, 191, 0.12);
+  color: #fff;
+}
+
+/* ── Адаптивність ── */
+@media (max-width: 640px) {
+  .pill-nav-links {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: flex;
+  }
+}
