@@ -72,7 +72,7 @@ export function Lightbox({ items, initialIndex, onClose }: LightboxProps) {
             <div className={s.imgWrap}>
               <img
                 key={current.src}
-                src={current.src}
+                src={`${import.meta.env.BASE_URL}${current.src}`}
                 alt={current.label}
                 className={s.img}
               />

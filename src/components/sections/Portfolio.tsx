@@ -87,7 +87,7 @@ function CaseCard({ item, index }: { item: PortfolioCase; index: number }) {
                     aria-label={`Відкрити: ${img.label}`}
                   >
                     <img
-                      src={img.src}
+                      src={`${import.meta.env.BASE_URL}${img.src}`}
                       alt={img.alt}
                       loading="lazy"
                       decoding="async"
