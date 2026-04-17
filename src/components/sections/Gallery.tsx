@@ -30,7 +30,7 @@ export function Gallery() {
             aria-label={`Відкрити: ${item.label}`}
           >
             <img
-              src={item.src}
+              src={`${import.meta.env.BASE_URL}${item.src}`}
               alt={item.label}
               className={s.media}
               loading="lazy"
