@@ -143,7 +143,7 @@ export function Hero() {
 
           <div className={s.photoFrame}>
             <img
-              src="src/I.jpg"
+              src="/I.jpg"
               alt="Владислав Погорєлов"
               className={s.photo}
               width={300}
